@@ -1,0 +1,63 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.title
+{
+    font-family: monospace;
+    color: #000;
+}
+
+nav
+{
+    padding: 10px;
+    
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.grid
+{
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    
+    flex-wrap: wrap;
+}
+
+.card
+{
+    margin: 10px;   
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    
+}
+
+.grid > .item
+{
+    /* flex: 1; */
+    flex-basis: 33%;
+}
+
+.item
+{
+    /* padding: 10px; */
+}
+
+.btn
+{
+    color: #fff;
+    cursor: pointer;  
+    padding: 10px 20px;
+    background: blue;
+    border-radius: 5px;
+
+}
