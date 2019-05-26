@@ -9,10 +9,14 @@
  
     </head>
     <body>
-        <canvas id="canvas" style="position: fixed; background: none; z-index: -1;"></canvas>
         <img src="./images.jpg" id="img" style="display: none">
-        <script src="bundle.js"></script>
-        <nav><div class="title">RicardoCTF</div></nav>
+        <nav>
+            <div class="title">RicardoCTF</div>
+            <div class="login">
+                <a href="/login">Login</a>
+
+            </div>
+        </nav>
         <div>
             @yield('content')
         </div>
