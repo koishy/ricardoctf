@@ -11,4 +11,4 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/ctf.js', 'public/js');
+mix.js('resources/js/ctf.js', 'public/js').js('resources/js/ctf-editor.js', 'public/js');

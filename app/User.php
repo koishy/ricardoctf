@@ -36,4 +36,31 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    function rank()
+    {
+        $taskChecks = $this->hasMany(\App\TaskCheck::class);
+
+        $total = $taskChecks->count();
+        $sum = $taskChecks->where('completed', true)->count();
+        return $sum - ($total - $sum);
+    }
+
+    function rankHtml()
+    {
+        $rank = $this->rank();
+
+        if ($rank < 0)
+        {
+            return '<span style="color: crimson">'.$rank.'</span>';
+        }
+        else if ($rank > 0)
+        {
+            return '<span style="color: green">'.$rank.'</span>';
+        }
+        else 
+        {
+            return $rank;
+        }
+    }
 }
